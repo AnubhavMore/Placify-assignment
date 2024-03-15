@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            transition: transform 0.5s ease;
+            height:50%;
+            width:50%;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+
+        #hiddenImage {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImage" src="./main.jpg" alt="Main Image" onmouseover="showHiddenImage()">
+    <img id="hiddenImage" src="./hidden.jpg" alt="Hidden Image" onmouseover="hideHiddenImage()">
+    
+    <script>
+        function showHiddenImage() {
+            document.getElementById('hiddenImage').style.display = 'flex';
+            document.getElementById('mainImage').style.display='none';
+        }
+
+        function hideHiddenImage() {
+            document.getElementById('mainImage').style.display = 'flex';
+            document.getElementById('hiddenImage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
